@@ -2,9 +2,16 @@ package com.example.demo;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 // @Component is used to tell Spring that this is a bean
+// @Scope -> Since by default Spring uses the 'singleton' we are hardcoding our Container to use 'prototype' Scope @Scope("prototype")
+// hardcoding this is not a good idea -> we'll then use the ConfigurableBeanFactory
 @Component
+//@Scope("prototype")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
     //to make binarySearch use the algorithms dynamically
     // make this class use the interface instead of the implementation
