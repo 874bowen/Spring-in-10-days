@@ -17,6 +17,11 @@ public class BinarySearchImpl {
     // make this class use the interface instead of the implementation
     // to tell spring that this is a dependency use @Autowired
     @Autowired
+    @Qualifier("bubble")
+    // this type of autowiring allows for only one type of algorithm not either just the bubbleSortAlgorithm
+    // by using the name of the instance variable to solve the conflict when you have two matches when autoWiring
+    // @Primary will always take precedence no matter what even if we are using AUTO-WIRING BY NAME bubbleSort as below
+//    private SortAlgorithm bubbleSortAlgorithm;
     private SortAlgorithm sortAlgorithm;
     // constructor injection
 //    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
