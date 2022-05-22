@@ -19,7 +19,15 @@ public class DemoApplication {
 		// Application Context enables us to get the binarySearch from Spring => it manages all the beans
 
 		ApplicationContext applicationContext = (ApplicationContext) SpringApplication.run(DemoApplication.class, args);
+		// when we are trying to get different instances of the binarySearchImpl what we get is the same instance of binarySearch
+		// These are called SINGLETON bean Scope -> by default spring uses this
+		// PROTOTYPE bean Scope - New bean whenever requested
+		// REQUEST bean Scope - One bean per HTTP request
+		// SESSION bean Scope - One bean per HTTP session
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
+		System.out.println(binarySearch);
+		System.out.println(binarySearch1);
 		int result = binarySearch.binarySearch(new int[] {12, 4, 6 }, 3);
 		System.out.println(result);
 	}
