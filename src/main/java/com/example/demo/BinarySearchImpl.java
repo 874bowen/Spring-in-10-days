@@ -3,7 +3,6 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 // @Component is used to tell Spring that this is a bean
 @Component
 public class BinarySearchImpl {
