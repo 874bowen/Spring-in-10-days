@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.springin10days.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
