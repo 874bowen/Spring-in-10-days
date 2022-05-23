@@ -5,11 +5,12 @@ package com.example.demo.springin10days;
 import com.example.demo.springin10days.cdi.SomeCDIBusiness;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class DemoCDIApplication {
 	// What are the beans?
 	// What are the dependencies of a bean
@@ -22,7 +23,8 @@ public class DemoCDIApplication {
 
 		// Application Context enables us to get the binarySearch from Spring => it manages all the beans
 
-		ApplicationContext applicationContext = (ApplicationContext) SpringApplication.run(DemoCDIApplication.class, args);
+		AnnotationConfigApplicationContext applicationContext =
+				new AnnotationConfigApplicationContext(DemoCDIApplication.class);
 		// when we are trying to get different instances of the binarySearchImpl what we get is the same instance of binarySearch
 		// These are called SINGLETON bean Scope -> by default spring uses this
 		// PROTOTYPE bean Scope - New bean whenever requested

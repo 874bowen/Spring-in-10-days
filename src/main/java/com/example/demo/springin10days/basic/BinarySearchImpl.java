@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+//
+//import javax.annotation.PostConstruct;
+//import javax.annotation.PreDestroy;
 
 // @Component is used to tell Spring that this is a bean
 // @Scope -> Since by default Spring uses the 'singleton' we are hardcoding our Container to use 'prototype' Scope @Scope("prototype")
@@ -51,14 +51,14 @@ public class BinarySearchImpl {
 
     // let's say you need something which needs all the dependencies are populated
     // as soon as the bean is created the postConstruct method would be called
-    @PostConstruct
-    public void postConstruct(){
-        LOGGER.info("PostConstruct");
-    }
-    // the PreDestroy annotation is used on methods as a callback notification to signal that
-    // the instance is in the process of being removed by the container
-    @PreDestroy
-    public void preDestroy(){
-        LOGGER.info("PreDestroy");
-    }
+//    @PostConstruct
+//    public void postConstruct(){
+//        LOGGER.info("PostConstruct");
+//    }
+//    // the PreDestroy annotation is used on methods as a callback notification to signal that
+//    // the instance is in the process of being removed by the container
+//    @PreDestroy
+//    public void preDestroy(){
+//        LOGGER.info("PreDestroy");
+//    }
 }
