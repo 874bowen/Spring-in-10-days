@@ -9,7 +9,10 @@
 <!--    we have to define a new schema Context xmlns: .....-->
 <!--    we also define a shortcut name to the schema context using the ':context'-->
 <!--    by default when you define anything without a namespace it belongs to the first-->
+<!--    we load the other beans we are using the component scan-->
     <context:component-scan base-package="com.example.demo.springin10days.basic" />
+
+<!--    some of the beans we are defining and autowiring them-->
     <bean id="xmlJdbcConnection" class="com.example.demo.springin10days.xml.XmlJdbcConnection">
         <!-- collaborators and configuration for this bean go here -->
     </bean>
