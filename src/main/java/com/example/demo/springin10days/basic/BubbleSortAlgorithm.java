@@ -1,10 +1,10 @@
 package com.example.demo.springin10days.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 // When you have two classes with @component you can use @Primary to give more emphasis to a class
-@Component
+@Service
 //@Primary
 @Qualifier("bubble")
 public class BubbleSortAlgorithm implements SortAlgorithm {

@@ -1,9 +1,9 @@
 package com.example.demo.springin10days.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 //@Primary
 // If one of the candidate among the algorithms and the candidate is favorite in all the situations then use @Primary(Most efficient)
 // If at some point we prefer a certain candidate to another then @Primary is not the most suitable way
