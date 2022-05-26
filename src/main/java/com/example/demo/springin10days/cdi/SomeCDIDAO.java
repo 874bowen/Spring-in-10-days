@@ -23,5 +23,10 @@ public class SomeCDIDAO {
     public void setJdbcConnection(JdbcConnection jdbcConnection) {
         this.jdbcConnection = jdbcConnection;
     }
+    public int[] getData(){
+        return new int[]{5, 89, 100};
+    }
+
 }
+
 
