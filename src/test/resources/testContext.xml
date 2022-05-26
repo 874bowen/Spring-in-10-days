@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+<!--    we have to define a new schema Context xmlns: .....-->
+<!--    we also define a shortcut name to the schema context using the ':context'-->
+<!--    by default when you define anything without a namespace it belongs to the first-->
+<!--    we load the other beans we are using the component scan-->
+    <!--
+    here in the test context we are importing the applicationContext and if
+    you want to override sth you can override it
+    -->
+    <import resource="classpath:applicationContext.xml"/>
+
+    <!-- more bean definitions go here -->
+
+</beans>
